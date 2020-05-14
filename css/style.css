@@ -1,11 +1,11 @@
 @font-face {
-  font-family: caps;
-  src: url("./waixemse\fonts\normal-bold.ttf");
+  font-family: 'caps';
+  src: url('/fonts/caps.ttf');
 }
 
 @font-face {
-  font-family: bold;
-  src: url("./waixemse-fonts/normal-bold.ttf");
+  font-family: 'normal';
+  src: url('fonts/normal-bold.ttf');
 }
 
 * {
@@ -15,8 +15,9 @@
   list-style: none;
   /* box-sizing: border-box; */
   letter-spacing: 0;
-  font-family: caps;
+  font-family: 'normal'
 }
+
 
 body {
   max-width: 1084px;
@@ -27,6 +28,14 @@ body {
 
 
 
+
+#burger-menu img {
+  height: 25px;
+  width: 25px;
+  cursor: pointer;}
+
+
+/* header */
 
 .header-container {
   background-color: white;
@@ -46,7 +55,7 @@ body {
 
 .nav {
   margin: 20px;
-  font-weight: bold;
+  font-family: 'caps';
   color: black;
   font-size: 14px;
 }
@@ -99,15 +108,16 @@ body {
 }
 
 .main-container h1 {
-  font-weight: 'normal';
+  font-family: 'caps';
+  font-weight: bold;
   font-size: 50px;
   margin-bottom: 13px;
 }
 
 .main-container p {
-  font-size: 14px;
-    font-weight: bold;
-    line-height: 22px;
+  font-size: 17px;
+    font-weight: 'normal';
+    line-height: 30px;
     margin-bottom: 46px;
     font-family: sans-serif;
 }
@@ -117,44 +127,35 @@ main::after {
   background-image: url("../images/basil_2.png");
   background-size: contain;
   position: absolute;
-  bottom: -150px;
-  right:0;
+  bottom: -125px;
+  right:100px;
   width: 240px;
   height: 220px;
   z-index: 99;
   background-repeat: no-repeat;
 }
 
-/* .blockSpan {
-  display: block;
-  line-height: 2;
-}
-
-.info2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-} */
 
 .vrclad {
   cursor: pointer;
-  padding: 15px 47px;
+  padding: 18px 60px;
+  font-family: 'caps';
   border: 1px solid #badc58;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: 300ms ease;
-  font-size: 14px;
+  font-size: 17px;
   background-color: #badc58;
   color: black;
 }
 
 .daukevi {
   display: flex;
+  font-family: 'normal';
   flex-direction: column;
   justify-content: stretch;
   align-items: center;
   margin-top: 3em;
+
 }
 
 .daukevi::after {
@@ -164,15 +165,14 @@ main::after {
 
 .daukevi a {
   font-family: sans-serif;
-  font-weight: bold;
-  font-size: 12px;
+  font-weight: 'normal';
+  font-size: 18px;
   color: #ffffff;
 }
 
 section {
   background-color: #ffffff;
   position: relative;
-
   padding: 25px;
 }
 
@@ -208,16 +208,21 @@ section::after {
 
 .containerul {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
+  flex-wrap: wrap;
+  background-color: #fff;
 }
 
 .containerul li {
-  min-width: calc((100% / 3) - 20px);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  text-align: center;
+  min-width: calc((100% / 3) - 20px);
+ font-family: 'normal';
+  /* max-width: 308px; */
+ 
 }
 
 .containerul li:hover {
@@ -230,20 +235,25 @@ section::after {
 .containerul li h3 {
   font-size: 16px;
   line-height: 18px;
+margin-bottom: 7px;
+max-width: 200px;
   color: #181818;
-  height: 37px;
+  font-family: 'caps';
+  
 }
 
 .containerul li p {
   font-size: 12px;
+  text-align: center;
+  max-width: 130px;
   line-height: 18px;
   color: #535c68;
   margin-bottom: 19px;
-  
+
 }
 
 .containerul button {
-  color: #badc58;
+  color:black;
   cursor: pointer;
   padding: 13px 50px;
   border: 1px solid #badc58;
@@ -252,7 +262,7 @@ section::after {
 }
 
 .containerul button:hover {
-  background-color: #badc58;
+  background-color:#badc58;
 }
 
 /* FOOTER  /////////////////////////////////////////////////////*/
@@ -343,6 +353,23 @@ address,
   color: #f59a63;
 }
 
+
+@media only screen and (min-width: 568px) and (max-width: 1024px) {
+
+  #burger-menu {
+    background-color: white;
+    border: none;
+    display: none;
+  }
+  
+  #burger-menu img {
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+  }
+}
+
+
 @media only screen and (max-width: 640px) {
   body{
     padding: 0 10px;
@@ -425,51 +452,80 @@ address,
       height: 120px;
   }
   
-
 }
 
 
-
-  
-  @media only screen and (min-width: 640px) and (max-width: 1144px) {
- 
-
-  main::before {
-    position: absolute;
-    z-index: -3;
-    bottom: 130px;
-    background-position: 80px;
+@media screen and (max-height: 450px) {
+  #burger-menu {
+    display: block;
   }
+}
 
-  body{
-    padding: 0 30px;
-  }
-  
-    footer::before {
-      display: none;
-    }
-  
-    .main-container,
-    .main-container::before,
-    .mainimage {
-      height: 400px;
-    }
-  
-    .main-container h1 {
-  
-      font-size: 36px;
-    margin-bottom: 31px;
-    line-height: 10px;
-    }
-  
-  .main-container p {
-    margin-bottom: 30px;
-  
-      }
-  
-      .vrclad{
-        margin-bottom: 30px;
-      }
+.overlay {
+  height: calc(100% - 60px);
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 60px;
+  background-color: #181818;
+  overflow-y: hidden;
+  /* disable scrolling */
+}
 
+/* position the content inside the overlay */
+.overlay-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
+/* The navigation links inside the overlay nav */
+.overlayNav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #181818;
+}
 
+.overlayNav a {
+  padding: 2px 25px;
+  color: white;
+  width: 150px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 45px;
+  font-family: caps;
+  margin-bottom: 15px;
+}
+
+.overlayNav a:hover {
+  color: black;
+  border-radius: 10px;
+  background-color: #badc58;
+}
+
+.footerNav {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #181818;
+}
+
+.footerNav a {
+  color: white;
+  margin: 10px 15px;
+}
+
+.footerNav a:nth-child(2) path {
+  fill: white;
+}
+
+.footerNav svg:hover path {
+  fill: #badc58;
+}
