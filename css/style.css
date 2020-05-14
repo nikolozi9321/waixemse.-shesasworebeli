@@ -353,80 +353,58 @@ address,
   color: #f59a63;
 }
 
-
-@media only screen and (min-width: 568px) and (max-width: 1024px) {
-
-  #burger-menu {
-    background-color: white;
-    border: none;
-    display: none;
-  }
-  
-  #burger-menu img {
-    height: 25px;
-    width: 25px;
-    cursor: pointer;
-  }
+#burger-menu {
+  background-color: white;
+  border: none;
+  display: none;
 }
-
+.overlay{
+  overflow-y: hidden;
+}
 
 @media only screen and (max-width: 640px) {
   body{
     padding: 0 10px;
   }
-    .header-container nav {
+    .header-container nav li a {
       display: none;
     }
   
     footer::before,
     .main-container::after {
       display: none;
+    
     }
-  
-    .main-container,
-    .main-container::before,
-    .mainimage {
+   .main-container{
       height: 300px;
     }
-  
-    .main-container h1 {
-  
-      font-size: 19px;
-      margin-bottom: 10px;
-    }
-  
-  .main-container p {
+  .main-container  h1{
+    font-size: 19px;
+    margin-bottom: 10px
+  }
+
+    .main-container p{
       font-size: 12px;
-      line-height: 17px;
-      font-family: sans-serif;
-      margin-bottom: 40px;
-  
-      }
-  
-      .vrclad{
-        color: #fff;
-        border: 1px solid #fff;
-        background: none;
-      }
-  
-      .vrclad:hover{
-        color:black;
-     border-color:whitesmoke; 
-        background: #badc58;
-      }
-  
-      .daukevi {
-        display: none;
-        
-      }
-  
-  
-      .footer,footer::after {
-        height: 633px;
-  
-      }
-  
-  
+    line-height: 17px;
+    font-family: 'bold';
+    margin-bottom: 40px;
+    }
+
+    .vrclad{
+      color: #fff;
+    background: none;
+    border: 1px solid #fff;
+    }
+    .daukevi{
+      display: none;
+    }
+
+    .main-container::before,.mainimage{
+      height: 300px;
+    
+    }
+
+   
       .contact {
         width: 294px;
         display: flex;
@@ -455,11 +433,18 @@ address,
 }
 
 
-@media screen and (max-height: 450px) {
+.overlay{
+  width:0px;
+}
+
+
+
+@media only screen and (max-width: 640px) {
   #burger-menu {
     display: block;
   }
 }
+
 
 .overlay {
   height: calc(100% - 60px);
@@ -469,10 +454,9 @@ address,
   top: 60px;
   background-color: #181818;
   overflow-y: hidden;
-  /* disable scrolling */
+
 }
 
-/* position the content inside the overlay */
 .overlay-content {
   height: 100%;
   display: flex;
@@ -480,7 +464,6 @@ address,
   justify-content: space-between;
 }
 
-/* The navigation links inside the overlay nav */
 .overlayNav {
   height: 100%;
   display: flex;
